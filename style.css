@@ -1,0 +1,135 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+*{
+    transition: all 0.2s;
+    margin: 0px;
+}
+h1{
+    margin-top: 30px;
+    font-size: 80px;
+    margin-bottom: 2px;
+}
+.cont{
+    
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.925);
+    width: 312px;
+    height: 310px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1%;
+}
+body{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(157, 203, 221, 0.795);
+
+}
+.cab{
+    display: flex;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+cursor: pointer;
+
+    align-items: center;
+}
+.cab.x::before,.cab.x::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 90px;
+    background-color: black;
+    
+}
+
+.cont.x .cab:not(.x):not(.o):hover::before,.cont.x .cab:not(.x):not(.o):hover::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 90px;
+    background-color: lightgrey;
+}
+.cab:hover::before{
+    transform: rotateZ(-45deg);
+}
+.cab::after{
+    transform: rotateZ( 45deg);
+}
+.cab.x::before{
+    transform: rotateZ(-45deg);
+}
+.cab.x::after{
+    transform: rotateZ( 45deg);
+}
+.cab.o::before,.cab.o::after{
+    content: "";
+    position: absolute;
+    
+    border-radius: 100%;
+    
+}
+.cab.o::before{
+    width: 90px;
+    height: 90px;
+    background-color: black;
+}
+.cab.o::after{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+.cab:active{
+    transform: translateX(2px);
+}
+.cab.x,.cab.o{
+    cursor: not-allowed;
+}
+.cont.o .cab:not(.x):not(.o):hover::before,.cont.o .cab:not(.x):not(.o):hover::after{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+}
+.cont.o .cab:not(.x):not(.o):hover::before{
+    width: 90px;
+    height: 90px;
+    background-color: lightgray;
+}
+.cont.o .cab:not(.x):not(.o):hover::after{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+}
+.winmsg{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width : 100vw;
+    height: 130vh;
+    background-color: rgba(0, 0, 0, 0.904);
+}
+#reset{
+    width: 100px;
+    height:40px;
+    font-size: 30px;
+}
+.win{
+    font-size: 50px;
+    color: aliceblue;
+}
+#reset:hover{
+    background-color: rgba(31, 28, 28, 0);
+    color: white;
+    transform: translateX(6px);
+}
